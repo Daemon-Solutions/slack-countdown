@@ -30,11 +30,7 @@
 		$params = explode('-', $text);
 
 		if(count($params) >= 3 && count($params) <= 4){
-			echo "Creating new countdown\n";
-			$user = substr($params[1], 5);
-			$text = substr($params[2], 9);
-
-			$eventDate = substr($params[1], 5);
+			$eventDate = substr($params[1], 5, 10);
 			$eventDescription = substr($params[2], 6);
 
 			if(count($params) == 4){
@@ -54,7 +50,6 @@
 		$link->query($sql);
 		if( $link->affected_rows == 1){
 			$post = true;
-			$reply = " Countdown Created";
 		}else{
 			$post = false;
 			$reply = " There was a problem creating your countdown, please try again later";
@@ -62,14 +57,14 @@
 
 		//if there was a successful insertion of a new countdown then post countdown to slack in channel it was created in
 		if($post == true){
-			$datetimeEvent = new DateTime($eventDate);
-			$datetimeNow = new DateTime(date("d/m/Y"));
+			$datetimeEvent = date_create_from_format('d/m/Y', $eventDate);
+			$datetimeNow = date_create_from_format('d/m/Y', date("d/m/Y"));
 			$datediff = $datetimeNow->diff($datetimeEvent);
 
-			if( $datediff > 1 || $datediff == 0){
-				$postText = $datediff." days to go until ".$eventDescription;
+			if( $datediff->format('%a') > 1 || $datediff->format('%a') == 0){
+				$postText = $datediff->format('%a')." days to go until ".$eventDescription;
 			} else {
-				$postText = $datediff." day to go until ".$eventDescription;
+				$postText = $datediff->format('%a')." day to go until ".$eventDescription;
 			}
 
 			$ch = curl_init($webhook_url);	//setup curl
