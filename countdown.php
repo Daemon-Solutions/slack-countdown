@@ -29,13 +29,11 @@
 		//extract command parameters and validate that the correct number of been passed
 		$params = explode(' -', $text);
 
-		echo "Params: ".count($params);
-
-		if(count($params) >= 3 && count($params) <= 4){
+		if(count($params) >= 2 && count($params) <= 3){
 			$eventDate = substr($params[1], 5, 10);
 			$eventDescription = substr($params[2], 6);
 
-			if(count($params) == 4){
+			if(count($params) == 3){
 				$imgURL = substr($params[3], 4);
 			} else {
 				$imgURL = "";
