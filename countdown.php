@@ -66,7 +66,8 @@
 				echo "No countdowns set";
 			}
 
-		} elseif( substr($params[0], 1, 6) == 'delete' ){ 
+		} elseif( substr($params[0], 1, 6) == 'delete' ){
+			echo "Entered the deleting zone"; 
 
 		} else {	
 
