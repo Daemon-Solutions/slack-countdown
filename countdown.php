@@ -67,6 +67,8 @@
 				$postText = $datediff->format('%a')." day to go until ".$eventDescription;
 			}
 
+			$footer = 'countdown created by '.$author;
+
 			$ch = curl_init($webhook_url);	//setup curl
 
 			//build json array
@@ -76,7 +78,8 @@
 				'attachments' => array(
 					array(
 						'title' => $postText,
-						'image_url' => $imgURL
+						'image_url' => $imgURL,
+						'footer' => $footer
 					)
 				),
 			);
