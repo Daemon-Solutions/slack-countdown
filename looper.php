@@ -3,6 +3,8 @@
 	// include configuration settings
 	require 'config.php';
 
+	date_default_timezone_set('Europe/London');
+
 	//create connection to the database
 	$link = new mysqli($db_host,$db_user,$db_pass,$db);
 
