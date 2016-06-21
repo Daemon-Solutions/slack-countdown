@@ -9,7 +9,7 @@
 	$datetimeNow = date_create_from_format('d/m/Y', date("d/m/Y"));
 	
 	//retrieve all future countdowns
-	$sql = "SELECT * from countdown where date >= CURDATE();";
+	$sql = "SELECT * from countdown where date >= CURDATE();"
 
 	$result = $link->query($sql);
 
