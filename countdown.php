@@ -27,7 +27,7 @@
 		}
 
 		//extract command parameters and validate that the correct number of been passed
-		$params = explode('-', $text);
+		$params = explode(' -', $text);
 
 		echo "Params: ".count($params);
 
