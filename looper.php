@@ -15,7 +15,6 @@
 
 	if( $result->num_rows > 0){
 		while( $row = $result->fetch_assoc()){
-			var_dump($row);
 			$datetimeEvent = date_create_from_format('Y-m-D', date('Y-m-D', strtotime($row['date'])));
 			$datediff = $datetimeNow->diff($datetimeEvent);
 
@@ -46,7 +45,7 @@
 			curl_setopt($ch, CURLOPT_POSTFIELDS, $payloadEncoded);	//attach json string to POST field
 			curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));	//set content type to application/json
 
-			$result = curl_exec($ch);	//execute curl and save any response codes
+			$curlresult = curl_exec($ch);	//execute curl and save any response codes
 
 		}
 
