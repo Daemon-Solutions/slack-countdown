@@ -69,7 +69,6 @@
 			$result->free();
 
 		} elseif( substr($params[0], 1, 6) == 'delete' ){
-			echo "Entered the deleting zone";
 			$toDelete = substr($params[0], 8);
 			$sql = "DELETE FROM countdown where id=".$toDelete.";";
 			$link->query($sql);
