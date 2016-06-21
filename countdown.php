@@ -66,10 +66,23 @@
 				echo "No countdowns set";
 			}
 
-		} elseif( substr($params[0], 1, 6) == 'delete' ){
-			echo "Entered the deleting zone"; 
+			$result->free();
 
-		} else {	
+		} elseif( substr($params[0], 1, 6) == 'delete' ){
+			echo "Entered the deleting zone";
+			$toDelete = substr($params[0], 8);
+			$sql = "DELETE FROM countdown where id=".$toDelete.";";
+			$link->query($sql);
+
+			if( $link->affected_rows == 1){
+				echo "Countdown with id: ".$toDelete." has been deleted\n";
+			} else {
+				echo "Error deleting countdown, please check id is correct and try again\n";
+			}
+
+			$result->free();
+
+		} else {
 
 			if(count($params) >= 2 && count($params) <= 3){
 				$eventDate = substr($params[0], 6);
