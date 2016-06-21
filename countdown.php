@@ -29,6 +29,8 @@
 		//extract command parameters and validate that the correct number of been passed
 		$params = explode(' -', $text);
 
+		echo(var_dump($params));
+
 		if(count($params) >= 2 && count($params) <= 3){
 			$eventDate = substr($params[1], 5, 10);
 			$eventDescription = substr($params[2], 6);
