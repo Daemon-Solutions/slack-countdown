@@ -15,7 +15,7 @@
 
 	if( $result->num_rows > 0){
 		while( $row = $result->fetch_assoc()){
-
+			var_dump($row);
 			$datetimeEvent = date_create_from_format('Y-m-D', date('Y-m-D', strtotime($row['date'])));
 			$datediff = $datetimeNow->diff($datetimeEvent);
 
