@@ -50,7 +50,7 @@
 					'attachments' => array(
 						array(
 							'title' => 'Countdowns',
-							'text' => $reply;
+							'text' => $reply
 						)
 					),
 				);
