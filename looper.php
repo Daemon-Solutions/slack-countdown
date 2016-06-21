@@ -48,14 +48,14 @@
 
 			$result = curl_exec($ch);	//execute curl and save any response codes
 
-			unset($datetimeEvent);
-			unset($datediff);
-			unset($postText);
-			unset($footer);
-			unset($payload);
-			unset($ch);
-
 		}
+
+		unset($datetimeEvent);
+		unset($datediff);
+		unset($postText);
+		unset($footer);
+		unset($payload);
+		unset($ch);
 	}
 
 	$link->close();
