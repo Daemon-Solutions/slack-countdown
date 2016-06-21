@@ -36,7 +36,7 @@
 
 			if( $result->num_rows > 0 ){
 				while( $row = $result->fetch_assoc()){
-					$reply = $reply."\n".$row['id']." » ".$row['event']." » ".date("d/m/Y", strtotime($row['date']))." » ".$row['url']." » ".$row['channel']." » ".$row['author'];
+					$reply = $reply."\n".$row['id']." » ".$row['event']." » ".date("d/m/Y", strtotime($row['date']))." » ".$row['url']." » ".$row['channel']." » ".$row['author']."\n";
 				}
 
 				$result->free();
