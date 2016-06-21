@@ -50,7 +50,7 @@
 		}
 		
 		//insert new countdown into db
-		$sql = "INSERT INTO countdown (event, date, url, channel, author) VALUES ('".$eventDescription."', STR_TO_DATE('".$eventDate."'), '".$imgURL."', '".$channel."', '".$author."')";
+		$sql = "INSERT INTO countdown (event, date, url, channel, author) VALUES ('".$eventDescription."', STR_TO_DATE('".$eventDate."', '%d/%m/%Y'), '".$imgURL."', '".$channel."', '".$author."');";
 		$link->query($sql);
 		if( $link->affected_rows == 1){
 			$post = true;
