@@ -47,9 +47,9 @@
 				$payload = array(
 					'channel' => '@'.$author,
 					'username' => 'countdown-bot',
-					'fallback' => $reply,
 					'attachments' => array(
 						array(
+							'fallback' => $reply,
 							'title' => 'Countdowns',
 							'text' => $reply
 						)
