@@ -19,9 +19,9 @@ You will need a Web Server with CURL, PHP and MySQL/MariaDB configured.  Your we
 After cloning the repository place the countdown folder on your webserver in a location that the files can be served from.  Using the mysql_schema.sql file create the countdown database and create a user with the necessary privileges to access the countdown database.
 
 #### Automated notifications
-In order to enable automated notifications, you will ned to configure an entry in cron that runs at your preferred interval and makes a curl call to the appropriate url that will server looper.php
+In order to enable automated notifications, you will ned to configure an entry in cron (or equivalent scheduler for your platform) that runs at your preferred interval and makes a curl call to the appropriate url that will serve looper.php
 
-##### Example
+##### Cron Example
 `30 9 * * * /path/to/curl http://yourdomain.com/countdown/looper.php`
 
 This will execute looper.php every morning at 09:30 (server time).  looper.php queries the database for active countdowns and then posts a countdown message to all the associated channels for those countdowns.s
