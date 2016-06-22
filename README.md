@@ -35,9 +35,9 @@ Take a not of the Token that has been generated, you will need this later in the
 ### Incoming WebHook
 * Configure a new Incoming Webhook, to allow the countdown scripts to post messages back to slack.  Use the following comfiguration:
 
-   Post to Channel:  @slackbot  (defaults any messages to being posted in the slackbot channel)
-   Name:  countdown-bot (or any name of your choosing)
-   Icon:  use the included image.png for the icon, or any image of your choosing 
+   Post to Channel:  @slackbot  (defaults any messages to being posted in the slackbot channel)  
+   Name:  countdown-bot (or any name of your choosing)  
+   Icon:  use the included image.png for the icon, or any image of your choosing  
 
 Take a note of the webhook url that has been generated, you will need this later in the configuration
 
