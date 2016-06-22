@@ -38,7 +38,7 @@ This will execute looper.php every morning at 09:30 (server time).  looper.php q
    Description: 'Create a new countdown'  
    Usage hint: '-date dd/mm/yyyy -event description [-img img_url]'
 
-Take a not of the Token that has been generated, you will need this later in the configuration.
+Take a note of the Token that has been generated, you will need this later in the configuration.
 
 ### Incoming WebHook
 * Configure a new Incoming Webhook, to allow the countdown scripts to post messages back to slack.  Use the following comfiguration:
