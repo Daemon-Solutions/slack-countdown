@@ -31,7 +31,7 @@
 		$params = explode(' -', $text);
 
 		if( substr($params[0], 1, 4) == 'list' ){
-			$sql = "SELECT * from countdown where date >= CURDATE();";
+			$sql = "SELECT * from countdown where date >= CURDATE() and author='".$author."';";
 			$result = $link->query($sql);
 
 			if( $result->num_rows > 0 ){
@@ -69,7 +69,7 @@
 
 		} elseif( substr($params[0], 1, 6) == 'delete' ){
 			$toDelete = substr($params[0], 8);
-			$sql = "DELETE FROM countdown where id=".$toDelete.";";
+			$sql = "DELETE FROM countdown where id=".$toDelete." and author='".$author."';";
 			$link->query($sql);
 
 			if( $link->affected_rows == 1){
