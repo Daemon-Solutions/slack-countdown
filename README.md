@@ -25,11 +25,24 @@ After cloning the repository place the countdown folder on your webserver in a l
 
    URL:  set this to the appropriate url to serve the countdown.php page from your webserver  
    Method: POST  
-   Name:  countdown-bot (any name of your choosing)  
+   Name:  countdown-bot (or any name of your choosing)  
    Icon:  use the included image.png for the icon, or any image of your choosing  
    Description: 'Create a new countdown'  
-   Usage hint: '-date dd/mm/yyyy -event description [-img img_url]'  
+   Usage hint: '-date dd/mm/yyyy -event description [-img img_url]'
 
+Take a not of the Token that has been generated, you will need this later in the configuration.
+
+### Incoming WebHook
+* Configure a new Incoming Webhook, to allow the countdown scripts to post messages back to slack.  Use the following comfiguration:
+
+   Post to Channel:  @slackbot  (defaults any messages to being posted in the slackbot channel)
+   Name:  countdown-bot (or any name of your choosing)
+   Icon:  use the included image.png for the icon, or any image of your choosing 
+
+Take a note of the webhook url that has been generated, you will need this later in the configuration
+
+### config.php
+config.php contains configuration values for slack and your mysql instance, these values need to be set before the bot will function.  Configure the mysql database settings to reflect your particular setup.  Set the slack token and webhook values to be the values noted from when you created the slash command and incoming webhook.
 
 
 ## Usage
