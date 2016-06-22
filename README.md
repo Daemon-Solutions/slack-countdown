@@ -22,6 +22,7 @@ After cloning the repository place the countdown folder on your webserver in a l
 
 ### Slash command
 * Configure a new slash command in Slack named 'countdown' (or an appropriate name of your choice), using the following settings:  
+
    URL:  set this to the appropriate url to serve the countdown.php page from your webserver  
    Method: POST  
    Name:  countdown-bot (any name of your choosing)  
