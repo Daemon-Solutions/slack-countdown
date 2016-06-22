@@ -55,7 +55,7 @@ The commands you can run are as follows:
 Create a new countdown:		/countdown **-date** *dd/mm/yyyy* **-event** *description for your event* **-img** *image_url (this is optional)*
 
 ### Admin usage
-List countdowns created by 'you':	/countdown -list
-Delete countdown:	/countdown -delete *countdown_id*   
+List countdowns created by 'you':	/countdown **-list**  
+Delete countdown:	/countdown **-delete** *countdown_id*   
 
 
