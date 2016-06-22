@@ -7,6 +7,10 @@ This bot allows users to define a countdown in any slack channel which is then a
 
 ## Screenshot
 
+<p align="center">
+<img src="https://raw.githubusercontent.com/Daemon-Solutions/slack-countdown/prod/Screenshot.png" />
+</p>
+
 
 ## Installation
 
