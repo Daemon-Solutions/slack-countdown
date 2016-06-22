@@ -66,8 +66,6 @@
 				echo "No countdowns set";
 			}
 
-			$result->free();
-
 		} elseif( substr($params[0], 1, 6) == 'delete' ){
 			$toDelete = substr($params[0], 8);
 			$sql = "DELETE FROM countdown where id=".$toDelete.";";
