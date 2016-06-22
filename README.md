@@ -47,5 +47,11 @@ config.php contains configuration values for slack and your mysql instance, thes
 
 ## Usage
 
+Once you have stepped through the above, you should now have a slash command that you can run to generate a countdown like the one in the screenshot above.
+
+The commands you can run are as follows:
+
+   #### Normal Usage
+   Create a new countdown:   /countdown -date *dd/mm/yyyy* -event *description for your event* -img *image url (this is optional)*
 
 
