@@ -52,6 +52,6 @@ Once you have stepped through the above, you should now have a slash command tha
 The commands you can run are as follows:
 
 #### Normal Usage
-Create a new countdown:   /countdown -date *dd/mm/yyyy* -event *description for your event* -img *image url (this is optional)*
+Create a new countdown:   `/countdown **-date** *dd/mm/yyyy* **-event** *description for your event* **-img** *image_url (this is optional)*`
 
 
