@@ -31,6 +31,7 @@
 			$payload = array(
 				'channel' => $row['channel'],
 				'username' => 'countdown-bot',
+				'fallback' => $postText,
 				'attachments' => array(
 					array(
 						'title' => $postText,
