@@ -27,7 +27,7 @@
 	if( $result->num_rows > 0){
 		// iterate over resultset if 1 or more rows are returned
 		while( $row = $result->fetch_assoc()){
-			$datetimeEvent = date_create_from_format('Y-m-D', date('Y-m-D', strtotime($row['date'])));  //initialise datetime object with countdown target date
+			$datetimeEvent = date_create_from_format('Y-m-d', date('Y-m-d', strtotime($row['date'])));  //initialise datetime object with countdown target date
 			$datediff = $datetimeNow->diff($datetimeEvent);  // work out the number of days from today to the taget date 
 
 			if( $datediff->format('%a') > 1 || $datediff->format('%a') == 0){  //check if the number of days is greater 1 or equal to 0
