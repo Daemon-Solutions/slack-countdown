@@ -62,6 +62,9 @@ The commands you can run are as follows:
 #### Normal Usage
 Create a new countdown:		/countdown **-date** *dd/mm/yyyy* **-event** *description for your event* **-img** *image_url (this is optional)*
 
+##### Example
+`/countdown -date 25/12/2016 -event CHRISTMAS!! -img https://media.giphy.com/media/RyvaihB82Vsis/giphy.gif`
+
 #### Admin usage
 List countdowns created by 'you':	/countdown **-list**  
 Delete countdown:	/countdown **-delete** *countdown_id*   
