@@ -11,6 +11,7 @@
 
 	// include configuration settings
 	require 'config.php';
+	require 'bankhols.php';
 
 	date_default_timezone_set('Europe/London');  //set default timezone to suppress php warnings about using system timezone
 
@@ -19,9 +20,10 @@
 
 	$datetimeNow = date_create_from_format('d/m/Y', date("d/m/Y"));  // initialise datetime object with todays date
 
-	if( $datetimeNow->format('N') <= 5 ){
 
-		
+	//Test of today is a weekend or a bank holiday.  Bank holiday function calculates UK bank holidays, you'd need to amend this for your locale
+	if( ( $datetimeNow->format('N') <= 5 && $datetimeNow->format('N') > 0 ) || ( !in_array($datetimeNow->format('Y-m-d'), calculateBankHolidays( intval( date('Y') ) ) ) ) ){
+	
 		// sql to retrieve all active countdowns
 		$sql = "SELECT * from countdown where date >= CURDATE();";
 
