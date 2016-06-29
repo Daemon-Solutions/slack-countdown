@@ -19,7 +19,7 @@
 
 	$datetimeNow = date_create_from_format('d/m/Y', date("d/m/Y"));  // initialise datetime object with todays date
 
-	if( $datetimeNow->format('N') >= 6 ){
+	if( $datetimeNow->format('N') <= 5 ){
 
 		
 		// sql to retrieve all active countdowns
