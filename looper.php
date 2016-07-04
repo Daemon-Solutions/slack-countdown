@@ -22,7 +22,7 @@
 
 
 	//Test of today is a weekend or a bank holiday.  Bank holiday function calculates UK bank holidays, you'd need to amend this for your locale
-	if( ( $datetimeNow->format('N') <= 5 && $datetimeNow->format('N') > 0 ) || ( !in_array($datetimeNow->format('Y-m-d'), calculateBankHolidays( intval( date('Y') ) ) ) ) ){
+	if( ( $datetimeNow->format('N') <= 5 && $datetimeNow->format('N') >= 1 ) && ( !in_array($datetimeNow->format('Y-m-d'), calculateBankHolidays( intval( date('Y') ) ) ) ) ){
 	
 		// sql to retrieve all active countdowns
 		$sql = "SELECT * from countdown where date >= CURDATE();";
